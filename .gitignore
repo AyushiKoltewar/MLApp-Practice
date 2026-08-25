@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+*.parquet
+spark-warehouse/
+.vscode/
+.idea/
