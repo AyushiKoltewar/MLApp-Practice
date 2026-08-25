@@ -3,7 +3,8 @@ from pyspark.sql import DataFrame
 
 
 def clean_data(df):
-    # Add null check for customer_id
+    # Combined fix: null handling for rows & customer_id filter
+    df = df.na.drop(how='any')
     df = df.dropna(subset=['customer_id'])
     df = df.filter(df['amount'] > 0)
     return df
