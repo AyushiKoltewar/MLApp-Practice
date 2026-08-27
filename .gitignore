@@ -4,4 +4,6 @@ __pycache__/
 *.parquet
 spark-warehouse/
 .vscode/
-.idea/
+.idea/*.env
+config/*_password.txt
+config/secrets.yaml
